@@ -34,7 +34,8 @@ def test_quando_listar_tarefas_a_tarefa_retornada_deve_possuir_id():
     resposta = cliente.get("/tarefas")
     assert "id" in resposta.json().pop()
     TAREFAS.clear()
-    
+
+
 def test_quando_listar_a_tarefa_retornada_deve_possuir_titulo():
     TAREFAS.append(
         {
@@ -48,8 +49,8 @@ def test_quando_listar_a_tarefa_retornada_deve_possuir_titulo():
     resposta = cliente.get("/tarefas")
     assert "titulo" in resposta.json().pop()
     TAREFAS.clear()
-    
-    
+
+
 def test_quando_listar_a_tarefa_retornada_deve_possuir_descricao():
     TAREFAS.append(
         {
@@ -63,7 +64,8 @@ def test_quando_listar_a_tarefa_retornada_deve_possuir_descricao():
     resposta = cliente.get("/tarefas")
     assert "descricao" in resposta.json().pop()
     TAREFAS.clear()
-    
+
+
 def test_quando_listar_a_tarefa_retornada_deve_possuir_estado():
     TAREFAS.append(
         {
@@ -77,4 +79,3 @@ def test_quando_listar_a_tarefa_retornada_deve_possuir_estado():
     resposta = cliente.get("/tarefas")
     assert "estado" in resposta.json().pop()
     TAREFAS.clear()
-
